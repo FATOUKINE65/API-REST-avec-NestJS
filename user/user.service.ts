@@ -56,7 +56,7 @@ export class UserService {
                 return {message:"L'email ou mot de passe est incorrect", success:false}
             }
 
-            //Revifier mot de passe
+            //Reverifier mot de passe
             const verifier_motDePasse = await bcrypt.compare(userData.password, user_exist.password)
 
             if(!verifier_motDePasse){
